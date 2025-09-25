@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-openai.api_key = os.getenv("OPENAI_API_KEY")  # ✅ Check env var name
+openai.api_key = os.getenv("OPENAI_API_KEY")  
 
 st.set_page_config(page_title="AI Image Analyzer", layout="centered")
 
@@ -60,3 +60,4 @@ if uploaded_file:
             except Exception as e:
                 st.error("An error occurred while analyzing the image.")
                 st.text(str(e))  # Optional: for debugging
+
